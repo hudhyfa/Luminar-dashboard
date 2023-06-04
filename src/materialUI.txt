@@ -1,0 +1,91 @@
+
+site: material.angular.io
+     
+1. ng add @angular/material
+
+ to add button first import and add to app.module.ts
+ then use it in html the code you took from the site
+ then nodemodules--angular--material--prebuilt themes--your theme
+
+2. create components
+    header,footer,sidebar,mainContent
+3. then set the selectors in app.comp.html
+4. then first add sidenav
+ select the api for sidebar from site and import them
+ then in app component paste the html code from the website
+ then inside mat drawer paste the sidebar selectors and inside 
+ mat drawer content paste the main content selector
+
+ 5. then whenever you want anything to design you should import its api in module.ts and then use it whereever you need
+
+6. then if you want to edit something in css if its possible to edit certain material it will be given inside the site, copy and paste them
+
+7. to add more icons to material fontawesomeicons.com where you can get the icon code and paste that name to your code.
+
+8. first set the side-bar in your style by editing on its html and css
+
+9. set the main content in this project you will need to add 4 components for main-content:
+    card,area-chart,pie-chart,table
+
+10. after creating the components set the position of each component by setting the selectors in the desired position
+    
+11. then you can design each of those components
+
+12. if you want a particular component inisde something go to main-content.html and give the selector inside the desired component
+
+13. if you have a parent design for 2 or more components and you want different design in each of them.
+    we have to do parent to child communication
+
+14. that means we have to go to the  ts file of parent n child and using the input selector we can set the variable 
+    which we can use in the main-contents  selectors after string interpolating child in their respective html files.
+    parent to child - @input
+    @Input heading:string="" like this in ts file 
+    <h1>{{heading}}</h1> in html file
+    <app heading="angular"></app> in mainContent html file
+
+
+15. child to parent communication
+1 Parent - child components communication
+    --------------------------------------
+    1 Child to Parent - @Output decorator
+
+    Parent -header component(toggle)
+    Child - side-bar component (app.component)
+
+    => EventEmitter -Used to generate userdefined events
+                -Its a class
+                -emit() is a method of EventEmitter class
+
+        i)header.html button (click)="menuIconClick()"
+        ii)header.ts- Userdefined event - @Output() toggle=new EventEmitter();
+        iii)app.html- <app-header (toggle)="sidebarToggle()">
+        iV)app.ts- sidebar:boolean=true
+        v)app.html- <mat-drawer mode="side" [opened]="sidebar">
+
+    2 Parent to Child component communication
+     
+     @Input() decorator
+
+Attribute Directives
+   Based on a class property we can apply style to the html element
+
+   1)Inbuild Attribute Directives : [ngClass]
+   2)Userdefined Attribute Directives
+
+
+Install highcharts in angular npm i highcharts-angular --save
+then in npm highcharts
+1 import module
+2 import html code
+3 import component code and edit as given below
+    Highcharts = Highcharts;
+    chartOptions={}
+
+    constructor(){
+      this.chartOptions = {give the code of the chart you wish to use discluding the discluding the container}
+    }
+
+    
+
+
+    

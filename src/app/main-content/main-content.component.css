@@ -1,0 +1,15 @@
+.card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.tablenpiechart{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
